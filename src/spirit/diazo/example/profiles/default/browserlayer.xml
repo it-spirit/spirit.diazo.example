@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<layers>
+  <layer
+      name="spirit.diazo.example"
+      interface="spirit.diazo.example.interfaces.ISpiritDiazoExampleLayer"
+      />
+</layers>
