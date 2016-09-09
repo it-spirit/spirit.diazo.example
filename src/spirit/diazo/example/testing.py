@@ -14,7 +14,6 @@ from plone.testing import (
     Layer,
     z2,
 )
-from zope.configuration import xmlconfig
 
 
 class SpiritDiazoExampleLayer(PloneSandboxLayer):
@@ -25,11 +24,7 @@ class SpiritDiazoExampleLayer(PloneSandboxLayer):
         """Set up Zope for testing."""
         # Load ZCML
         import spirit.diazo.example
-        xmlconfig.file(
-            'configure.zcml',
-            spirit.diazo.example,
-            context=configurationContext
-        )
+        self.loadZCML(package=spirit.diazo.example)
 
     def setUpPloneSite(self, portal):
         applyProfile(portal, 'spirit.diazo.example:default')

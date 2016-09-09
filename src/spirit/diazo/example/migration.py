@@ -2,7 +2,7 @@
 """Migration steps for spirit.diazo.example."""
 
 # zope imports
-# from Products.CMFCore.utils import getToolByName
+# from plone import api as plone_api
 # from Products.CMFPlone.interfaces.siteroot import IPloneSiteRoot
 # from zope.component import getUtility
 
@@ -17,5 +17,5 @@ def migrate_to_1001(context):
     * Step 2
     """
     # site = getUtility(IPloneSiteRoot)
-    # setup = getToolByName(site, 'portal_setup')
+    # setup = plone_api.portal.get_tool(name='portal_setup')
     # setup.runImportStepFromProfile(config.INSTALL_PROFILE, 'actions')
